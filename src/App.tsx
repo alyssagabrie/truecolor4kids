@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import ColorExploreView from './pages/ColorExploreView';
@@ -13,7 +13,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router basename="/truecolor4kids">
+    <Router>
       <div className="App">
         <Navbar />
         <main className="main-content">
