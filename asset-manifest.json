@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/truecolor4kids/static/css/main.69a2e6b4.css",
-    "main.js": "/truecolor4kids/static/js/main.0aee681e.js",
+    "main.js": "/truecolor4kids/static/js/main.dc0d3752.js",
     "index.html": "/truecolor4kids/index.html",
     "main.69a2e6b4.css.map": "/truecolor4kids/static/css/main.69a2e6b4.css.map",
-    "main.0aee681e.js.map": "/truecolor4kids/static/js/main.0aee681e.js.map"
+    "main.dc0d3752.js.map": "/truecolor4kids/static/js/main.dc0d3752.js.map"
   },
   "entrypoints": [
     "static/css/main.69a2e6b4.css",
-    "static/js/main.0aee681e.js"
+    "static/js/main.dc0d3752.js"
   ]
 }
