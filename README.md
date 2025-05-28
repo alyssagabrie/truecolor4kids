@@ -1,46 +1,137 @@
-# Getting Started with Create React App
+# TrueColor4Kids
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An interactive educational web application designed to teach children about colors, objects, and activities through engaging cards and quizzes.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Interactive color cards with myths, truths, and historical facts
+- Object exploration with detailed information
+- Activity cards with educational content
+- Quiz functionality for each section
+- Responsive design for all devices
+- Dark/light theme support
 
-### `npm start`
+## Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Node.js (v14 or higher)
+- npm (v6 or higher)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Clone the repository:
+```bash
+git clone [your-repository-url]
+cd truecolor4kids
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Install dependencies:
+```bash
+npm install
+```
 
-### `npm run build`
+3. Start the development server:
+```bash
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The application will be available at `http://localhost:3000`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Building for Production
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To create a production build:
 
-### `npm run eject`
+```bash
+npm run build
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This will create a `build` folder with optimized production files.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Deployment
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Option 1: Deploy to Vercel
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Install Vercel CLI:
+```bash
+npm install -g vercel
+```
 
-## Learn More
+2. Deploy:
+```bash
+vercel
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Option 2: Deploy to Netlify
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Install Netlify CLI:
+```bash
+npm install -g netlify-cli
+```
+
+2. Deploy:
+```bash
+netlify deploy
+```
+
+### Option 3: Deploy to GitHub Pages
+
+1. Add homepage to package.json:
+```json
+{
+  "homepage": "https://[your-username].github.io/truecolor4kids"
+}
+```
+
+2. Install gh-pages:
+```bash
+npm install --save-dev gh-pages
+```
+
+3. Add deploy scripts to package.json:
+```json
+{
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
+}
+```
+
+4. Deploy:
+```bash
+npm run deploy
+```
+
+## Environment Variables
+
+No environment variables are required for basic functionality. If you need to add any in the future, create a `.env` file in the root directory.
+
+## Project Structure
+
+```
+truecolor4kids/
+├── public/              # Static files
+├── src/                 # Source files
+│   ├── components/      # React components
+│   ├── pages/          # Page components
+│   ├── styles/         # CSS files
+│   ├── data/           # Data files
+│   └── App.tsx         # Main App component
+├── package.json        # Dependencies and scripts
+└── tsconfig.json      # TypeScript configuration
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Support
+
+For support, please open an issue in the GitHub repository or contact [your-email].

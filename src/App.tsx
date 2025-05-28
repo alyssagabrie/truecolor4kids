@@ -1,25 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import HomePage from './pages/HomePage';
+import ColorExploreView from './pages/ColorExploreView';
+import ColorQuizView from './pages/ColorQuizView';
+import ObjectExploreView from './pages/ObjectExploreView';
+import ObjectQuizView from './pages/ObjectQuizView';
+import ActivityExploreView from './pages/ActivityExploreView';
+import ActivityQuizView from './pages/ActivityQuizView';
+import AboutPage from './pages/AboutPage';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/colors" element={<ColorExploreView />} />
+            <Route path="/colors/quiz" element={<ColorQuizView />} />
+            <Route path="/objects" element={<ObjectExploreView />} />
+            <Route path="/objects/quiz" element={<ObjectQuizView />} />
+            <Route path="/activities" element={<ActivityExploreView />} />
+            <Route path="/activities/quiz" element={<ActivityQuizView />} />
+            <Route path="/about" element={<AboutPage />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
 
