@@ -13,7 +13,7 @@ import './App.css';
 
 function App() {
   return (
-    <Router basename="/truecolor4kids">
+    <Router>
       <div className="App">
         <Navbar />
         <main className="main-content">
